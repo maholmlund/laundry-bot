@@ -42,7 +42,7 @@ time = os.environ["HOAS_TIME"]
 weekday = int(os.environ["HOAS_WEEKDAY"])
 machine_number = os.environ["HOAS_MACHINE"]
 
-start = datetime.datetime.today() + relativedelta(months=1)
+start = datetime.datetime.today() + relativedelta(months=1, days=4)
 start = start.replace(day=1)
 days = []
 current = start
