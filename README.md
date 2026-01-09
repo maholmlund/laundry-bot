@@ -13,3 +13,6 @@ This script can either be used as stand-alone or with the Docker container provi
 All environment variables need to be set in order to make the script work. The machine number can be observed on the booking page by hovering over the booking button. The link is in the format https://booking-hoas.tampuuri.fi/varaus/service/reserve/MACHINE_NUMBER/TIME/DATE
 
 **Note:** If the login credentials are incorrect the script does not complete the booking. But if the time slots are already taken, it still tries to book all the slots but does not give any indication on whether the booking was successful or not. The API of the website is not that easy to work with.
+
+## Docker run example
+`$ docker run --rm -e HOAS_USER=myuser -e HOAS_PASSWORD=secret -e HOAS_MACHINE=1234 -e HOAS_TIME=12.00 -e HOAS_WEEKDAY=2 ghcr.io/maholmlund/laundry-bot`
